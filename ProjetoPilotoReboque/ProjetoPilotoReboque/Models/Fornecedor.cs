@@ -1,4 +1,4 @@
-﻿
+﻿using ProjetoPilotoReboque.Models.Enums;
 
 namespace ProjetoPilotoReboque.Models
 {
