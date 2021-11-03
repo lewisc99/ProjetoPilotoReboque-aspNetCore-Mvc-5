@@ -36,17 +36,21 @@ namespace ProjetoPilotoReboque
             });
 
 
+            //lembre-se para povoar o banco de dados precisa passar abaixo, que a classe para povoar os dados, vai esta ativa em ambiente de execução.
+
             services.AddScoped<EnviarDados>();
             services.AddScoped<IFormularioRepositorio, FormularioRepositorio>();
 
         }
 
     
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,EnviarDados enviarDados)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                enviarDados.Seed();
             }
             else
             {

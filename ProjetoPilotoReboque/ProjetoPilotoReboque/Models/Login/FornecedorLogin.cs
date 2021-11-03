@@ -7,8 +7,8 @@ namespace ProjetoPilotoReboque.Models.Login
 {
     public class FornecedorLogin:ILogin
     {
-        public int Id { get; set; }
 
+        public int Id { get; set; }
         public string NomeCompleto { get; set; }
 
         public string Email { get; set; }
@@ -21,9 +21,9 @@ namespace ProjetoPilotoReboque.Models.Login
         {
 
         }
-        public FornecedorLogin(int id, string nomeCompleto, string email, string senha)
+        public FornecedorLogin(string nomeCompleto, string email, string senha)
         {
-            Id = id;
+
             NomeCompleto = nomeCompleto;
             Email = email;
             Senha = senha;

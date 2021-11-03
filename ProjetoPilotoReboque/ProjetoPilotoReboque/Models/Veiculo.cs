@@ -21,9 +21,9 @@ namespace ProjetoPilotoReboque.Models
 
        
 
-        public Veiculo(int veiculoId, string modelo,  string placa, GrupoDeVeiculo grupo)
+        public Veiculo( string modelo,  string placa, GrupoDeVeiculo grupo)
         {
-            VeiculoId = veiculoId;
+           
             Modelo = modelo;
             Placa = placa;
             Grupo = grupo;

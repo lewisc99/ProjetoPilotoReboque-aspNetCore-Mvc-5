@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace ProjetoPilotoReboque.Models.Enums
 {
-    public enum CausaDaOcorrencia:int
+    public enum CausaDaOcorrencia
     {
 
-        Pane =1,
-        Acidente =2,
+        Pane ,
+        Acidente2,
         
         
     }

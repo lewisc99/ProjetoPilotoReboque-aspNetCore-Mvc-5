@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace ProjetoPilotoReboque.Models.Enums
 {
-    public enum GrupoDeVeiculo: int
+    public enum GrupoDeVeiculo
     {
 
-      A = 1,
-      B = 2,
-      C = 3,
-      Gx = 4,
-      P = 5,
-      Fx = 6
+      A ,
+      B ,
+      C ,
+      Gx ,
+      P ,
+      Fx 
     }
 }
