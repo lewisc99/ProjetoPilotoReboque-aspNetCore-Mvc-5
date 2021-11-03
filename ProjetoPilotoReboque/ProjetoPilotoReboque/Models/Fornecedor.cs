@@ -9,6 +9,14 @@ namespace ProjetoPilotoReboque.Models
         public string Name { get; set; }
 
 
+        public Fornecedor()
+        {
 
+        }
+        public Fornecedor(int fornecedorId, string name)
+        {
+            FornecedorId = fornecedorId;
+            Name = name;
+        }
     }
 }

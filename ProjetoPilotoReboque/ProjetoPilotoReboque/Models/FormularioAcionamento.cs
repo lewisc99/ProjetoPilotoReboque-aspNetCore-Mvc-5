@@ -10,6 +10,10 @@ namespace ProjetoPilotoReboque.Models
     {
         public int Id { get; set; }
 
+        public string ClienteNomeCompleto { get; set; }
+
+        public string ContratoNumero { get; set; }
+
         public Fornecedor Fornecedor { get; set; }
 
         public DateTime DataDoAcionamento { get; set; }
@@ -23,9 +27,33 @@ namespace ProjetoPilotoReboque.Models
         public string Endereço { get; set; }
 
 
+        public FormularioAcionamento()
+        {
+
+        }
+
+        public FormularioAcionamento(int id, string clienteNomeCompleto,string contratoNumero,
+            Fornecedor fornecedor,DateTime dataDoAcionamento,Veiculo veiculo,string descricao,
+            CausaDaOcorrencia causaDoAcidente,string endereco)
+        {
+            Id = id;
+            ClienteNomeCompleto = clienteNomeCompleto;
+            ContratoNumero = contratoNumero;
+            Fornecedor = fornecedor;
+            DataDoAcionamento = dataDoAcionamento;
+            Veiculo = veiculo;
+            Descricao = descricao;
+            CausaDaOcorrencia = causaDoAcidente;
+            Endereço = endereco;
+            
+
+
+        }
+
+
 
 
     }
 
-  
+
 }

@@ -35,6 +35,9 @@ namespace ProjetoPilotoReboque
             });
 
 
+            services.AddScoped<EnviarDados>();
+            
+
         }
 
     

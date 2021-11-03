@@ -10,9 +10,25 @@ namespace ProjetoPilotoReboque.Models.Login
 
         public int Id { get; set; }
 
-       
+        public string NomeCompleto { get; set; }
         public string Email { get; set; }
 
         public string Senha { get; set; }
+
+
+        public ColaboradorLogin()
+        {
+
+        }
+
+        public ColaboradorLogin(int id, string nomeCompleto, string email, string senha)
+        {
+            Id = id;
+            NomeCompleto = nomeCompleto;
+            Email = email;
+            Senha = senha;
+        }
+
+
     }
 }

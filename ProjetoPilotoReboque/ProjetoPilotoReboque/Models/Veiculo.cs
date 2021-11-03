@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoPilotoReboque.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,16 @@ namespace ProjetoPilotoReboque.Models
 
         public string Placa { get; set; }
 
-        public string Grupo { get; set; }
+        public GrupoDeVeiculo Grupo { get; set; }
+
+       
+
+        public Veiculo(int veiculoId, string modelo,  string placa, GrupoDeVeiculo grupo)
+        {
+            VeiculoId = veiculoId;
+            Modelo = modelo;
+            Placa = placa;
+            Grupo = grupo;
+        }
     }
 }
