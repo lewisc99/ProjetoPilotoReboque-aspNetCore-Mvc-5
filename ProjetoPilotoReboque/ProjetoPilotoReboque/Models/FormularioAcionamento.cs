@@ -15,10 +15,15 @@ namespace ProjetoPilotoReboque.Models
         public string ContratoNumero { get; set; }
 
         public Fornecedor Fornecedor { get; set; }
+       public int FornecedorId { get; set; }
+
+
 
         public DateTime DataDoAcionamento { get; set; }
 
         public Veiculo Veiculo { get; set; }
+
+        public int VeiculoId { get; set; }
 
         public string Descricao {get;set;}
 
@@ -45,7 +50,6 @@ namespace ProjetoPilotoReboque.Models
             Descricao = descricao;
             CausaDaOcorrencia = causaDoAcidente;
             Endereço = endereco;
-            
 
 
         }

@@ -17,6 +17,8 @@ namespace ProjetoPilotoReboque.Models
 
         public GrupoDeVeiculo Grupo { get; set; }
 
+        public ICollection<FormularioAcionamento> FormularioAcionamento { get; set; } = new List<FormularioAcionamento>();
+
        
 
         public Veiculo(int veiculoId, string modelo,  string placa, GrupoDeVeiculo grupo)

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProjetoPilotoReboque.Data;
+using ProjetoPilotoReboque.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +37,7 @@ namespace ProjetoPilotoReboque
 
 
             services.AddScoped<EnviarDados>();
-            
+            services.AddScoped<IFormularioRepositorio, FormularioRepositorio>();
 
         }
 

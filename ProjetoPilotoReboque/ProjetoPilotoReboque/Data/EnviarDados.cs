@@ -11,7 +11,7 @@ namespace ProjetoPilotoReboque.Data
     public class EnviarDados
     {
 
-        private  readonly PilotoReboqueContext _context;
+        private   PilotoReboqueContext _context;
 
        public EnviarDados(PilotoReboqueContext context)
         {

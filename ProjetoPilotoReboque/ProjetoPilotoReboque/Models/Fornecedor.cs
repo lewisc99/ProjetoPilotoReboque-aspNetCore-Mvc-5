@@ -1,4 +1,6 @@
 ﻿using ProjetoPilotoReboque.Models.Enums;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace ProjetoPilotoReboque.Models
 {
@@ -7,6 +9,9 @@ namespace ProjetoPilotoReboque.Models
         public int FornecedorId { get; set; }
 
         public string Name { get; set; }
+
+
+        public ICollection<FormularioAcionamento> FormularioAcionamento { get; set; } = new List<FormularioAcionamento>();
 
 
         public Fornecedor()
