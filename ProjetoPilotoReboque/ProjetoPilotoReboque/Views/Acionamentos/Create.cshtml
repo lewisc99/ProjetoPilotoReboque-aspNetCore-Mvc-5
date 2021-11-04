@@ -1,1 +1,68 @@
-﻿
+﻿@model ProjetoPilotoReboque.Models.ViewModels.FormularioDeAcionamentoViewModel
+
+
+
+@{
+    ViewData["title"] = "Create";
+}
+
+
+<h2>@ViewData["title"]</h2>
+
+<h4>Seller</h4>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+
+                <div class="form-group">
+                    <label asp-for="FormularioAcionamentos.ClienteNomeCompleto" class="control-label"></label>
+                    <input asp-for="FormularioAcionamentos.ClienteNomeCompleto" class="form-control" />
+
+                    <span asp-validation-for="FormularioAcionamentos.ClienteNomeCompleto" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="FormularioAcionamentos.ContratoNumero" class="control-label"></label>
+                    <input asp-for="FormularioAcionamentos.ContratoNumero" class="form-control" />
+
+                    <span asp-validation-for="FormularioAcionamentos.ContratoNumero" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="FormularioAcionamentos.FornecedorId" class="control-label"></label>
+                    <select asp-for="FormularioAcionamentos.FornecedorId" asp-items="@(new SelectList(Model.Fornecedores,"Id","Name"))" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FormularioAcionamentos.DataDoAcionamento" class="control-label"></label>
+                    <input asp-for="FormularioAcionamentos.DataDoAcionamento" class="form-control" />
+
+                    <span asp-validation-for="FormularioAcionamentos.DataDoAcionamento" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="FormularioAcionamentos.VeiculoId" class="control-label"></label>
+                    <select asp-for="FormularioAcionamentos.VeiculoId" asp-items="@(new SelectList(Model.Veiculos,"Id","Placa"))" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FormularioAcionamentos.Descricao" class="control-label"></label>
+                    <textarea asp-for="FormularioAcionamentos.Descricao" class="form-control" placeholder="Adicione uma descrição" rows="5"></textarea>
+                    <span asp-validation-for="FormularioAcionamentos.Descricao" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FormularioAcionamentos.Endereço" class="control-label"></label>
+                    <textarea asp-for="FormularioAcionamentos.Endereço" class="form-control" placeholder="Adicione um Endereço" rows="5"></textarea>
+                    <span asp-validation-for="FormularioAcionamentos.Endereço" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Concluir Acionamento" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

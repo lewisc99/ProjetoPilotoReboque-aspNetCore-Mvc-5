@@ -13,7 +13,7 @@ namespace ProjetoPilotoReboque.Repositories
         FormularioAcionamento ObterPorId(int id);
 
         void Adicionar(FormularioAcionamento formulario);
-        void Editar(int id);
+        void Editar(int id,FormularioAcionamento formulario);
 
         void Excluir(int id);
 

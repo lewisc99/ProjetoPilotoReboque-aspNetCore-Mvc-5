@@ -26,6 +26,7 @@ namespace ProjetoPilotoReboque.Controllers
 
         public IActionResult Create()
         {
+
             return View();
         }
 
