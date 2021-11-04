@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProjetoPilotoReboque.Data;
+using ProjetoPilotoReboque.Models;
+using ProjetoPilotoReboque.Models.ViewModels;
 using ProjetoPilotoReboque.Repositories;
 using System;
 using System.Collections.Generic;
@@ -10,10 +13,12 @@ namespace ProjetoPilotoReboque.Controllers
     public class AcionamentosController : Controller
     {
         private readonly IFormularioRepositorio _formularioRepositorio;
+        private readonly PilotoReboqueContext _pilotoReboqueContext;
 
-        public AcionamentosController(IFormularioRepositorio formularioRepositorio)
+        public AcionamentosController(IFormularioRepositorio formularioRepositorio, PilotoReboqueContext pilotoReboqueContext)
         {
             _formularioRepositorio = formularioRepositorio;
+            _pilotoReboqueContext = pilotoReboqueContext;
         }
 
 
@@ -27,21 +32,35 @@ namespace ProjetoPilotoReboque.Controllers
         public IActionResult Create()
         {
 
-            return View();
+            var fornecedores = _pilotoReboqueContext.Fornecedor.ToList();
+            var veiculos = _pilotoReboqueContext.Veiculo.ToList();
+
+
+            var viewModel = new FormularioDeAcionamentoViewModel { Fornecedores = fornecedores, Veiculos = veiculos };
+
+            return View(viewModel);
+
         }
 
-        public IActionResult Update()
+        public IActionResult Update(int id, FormularioAcionamento formulario )
         {
-            return View();
+            _formularioRepositorio.Editar(id,formulario);
+
+            return RedirectToAction(nameof(Index));
+
+
         }
         public IActionResult Details()
         {
             return View();
+
         }
 
-        public IActionResult Delete()
+        public IActionResult Delete(int id)
         {
-            return View();
+            _formularioRepositorio.Excluir(id);
+
+            return RedirectToAction(nameof(Index));
         }
 
     }

@@ -1,21 +1,21 @@
 ﻿@model IEnumerable<ProjetoPilotoReboque.Models.FormularioAcionamento>
 
 
-
+<br/>
 <p>
-    <a asp-action="Create" class="btn btn-default">Novo Acionamento</a>
+    <a asp-action="Create" class="btn btn-success">Novo Acionamento</a>
 </p>
-<table class="table table-striped table-hover">
+<table class="table table-striped table-hover  table-success">
     <thead>
         <tr class="success">
             <th>
                 @Html.DisplayNameFor(model => model.ContratoNumero)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ClienteNomeCompleto);
+                @Html.DisplayNameFor(model => model.ClienteNomeCompleto)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Veiculo.Placa);
+                @Html.DisplayNameFor(model => model.Veiculo.Placa)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DataDoAcionamento)
