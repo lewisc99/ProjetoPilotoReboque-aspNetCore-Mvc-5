@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoPilotoReboque.Repositories
 {
-    interface IFormularioRepositorio
+   public interface IFormularioRepositorio
     {
         IEnumerable<FormularioAcionamento> ObterTodos();
 
