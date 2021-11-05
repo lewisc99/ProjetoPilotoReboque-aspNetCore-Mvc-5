@@ -24,15 +24,20 @@ namespace ProjetoPilotoReboque.Repositories
 
         }
 
-        public void Editar(int id, FormularioAcionamento formulario)
+        public void Editar(FormularioAcionamento formulario)
         {
-            var findId = ObterPorId(id);
 
-            if (findId.Id == id)
+
+            bool hasAny =  _context.FormularioAcionamento.Any(x => x.Id == formulario.Id);
+
+            if (!hasAny)
             {
-                _context.Update(findId);
-                _context.SaveChanges();
+                return;
             }
+            // var find = _context.Person.FirstOrDefault(x => x.Id == person.Id);
+
+            _context.Update(formulario);
+            _context.SaveChangesAsync();
         }
 
         public void Excluir(int id)

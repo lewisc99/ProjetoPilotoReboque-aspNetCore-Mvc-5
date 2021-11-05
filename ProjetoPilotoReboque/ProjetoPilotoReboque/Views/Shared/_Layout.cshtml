@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+<!--{
+    string Login = Context.Session.GetString("Login"); //uma forma de acessar o http contexto do HomeController
+}--->
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -21,9 +27,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
+
+                        <li><a class="nav-link text-dark" asp-controller="Acionamentos" asp-action="Index">Acionamentos</a></li>
+                        <li><a class="nav-link text-dark" asp-controller="Home" asp-action="LoginColaborador">Login Colaborador</a></li>
+                        <li><a class="nav-link text-dark" asp-controller="Home" asp-action="LoginFornecedor">Login Fornecedor</a></li>
+
+                        <li><a class="nav-link text-dark" asp-controller="Home" asp-action="LogOut">LogOut</a></li>
                     </ul>
                 </div>
             </div>

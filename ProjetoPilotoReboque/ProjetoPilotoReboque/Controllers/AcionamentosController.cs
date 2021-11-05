@@ -29,39 +29,82 @@ namespace ProjetoPilotoReboque.Controllers
             return View(list);
         }
 
+        [HttpGet]
         public IActionResult Create()
         {
 
-            var fornecedores = _pilotoReboqueContext.Fornecedor.ToList();
-            var veiculos = _pilotoReboqueContext.Veiculo.ToList();
 
-
-            var viewModel = new FormularioDeAcionamentoViewModel { Fornecedores = fornecedores, Veiculos = veiculos };
-
-            return View(viewModel);
+            return View(new FormularioAcionamento());
 
         }
 
-        public IActionResult Update(int id, FormularioAcionamento formulario )
+
+
+        [HttpPost]
+        public IActionResult Create( FormularioAcionamento formulario)
         {
-            _formularioRepositorio.Editar(id,formulario);
+
+             _formularioRepositorio.Adicionar(formulario);
+
+
+            return RedirectToAction(nameof(Index));
+
+        }
+
+
+        [HttpGet]
+        public IActionResult Editar(int? id)
+        {
+
+            var acharId = _formularioRepositorio.ObterPorId(id.Value);
+
+
+            return View(nameof(Editar), acharId);
+
+
+          
+
+        }
+       
+        [HttpPost]
+        public IActionResult Editar( FormularioAcionamento formulario)
+        {
+
+            _formularioRepositorio.Editar(formulario);
+
 
             return RedirectToAction(nameof(Index));
 
 
+
+
         }
-        public IActionResult Details()
+        [HttpGet]
+        public IActionResult Delete(int? id)
         {
-            return View();
+
+            var acharId = _formularioRepositorio.ObterPorId(id.Value);
+
+
+            return View(acharId);
+
+
+
 
         }
 
+        [HttpPost]
         public IActionResult Delete(int id)
         {
+
             _formularioRepositorio.Excluir(id);
 
-            return RedirectToAction(nameof(Index));
-        }
 
+            return RedirectToAction(nameof(Index));
+
+
+
+
+        }
     }
 }

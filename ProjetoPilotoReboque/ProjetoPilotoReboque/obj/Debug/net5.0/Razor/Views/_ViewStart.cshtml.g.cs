@@ -19,8 +19,15 @@ using ProjetoPilotoReboque;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\Views\_ViewImports.cshtml"
+using ProjetoPilotoReboque.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cee6519c06c8d5e18fa3d449e41dfecb28847322", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"528fd214b0c8db032849eb1b9d7b40eaa313497b", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -1,5 +1,5 @@
 ﻿using ProjetoPilotoReboque.Models;
-using ProjetoPilotoReboque.Models.Enums;
+
 using ProjetoPilotoReboque.Models.Login;
 using System;
 using System.Collections.Generic;
@@ -11,6 +11,7 @@ namespace ProjetoPilotoReboque.Data
     public class EnviarDados
     {
 
+
         private   PilotoReboqueContext _context;
 
        public EnviarDados(PilotoReboqueContext context)
@@ -21,15 +22,13 @@ namespace ProjetoPilotoReboque.Data
 
         public void Seed()
         {
-            if(_context.ColaboradorLogin.Any() || _context.Fornecedor.Any() || _context.Veiculo.Any() || _context.FornecedorLogin.Any())
+            if(_context.ColaboradorLogin.Any() || _context.FornecedorLogin.Any() || _context.FormularioAcionamento.Any())
             {
                 return;
             }
             else
             {
-                Fornecedor fornecedorEurop = new Fornecedor( "Europ");
-                Fornecedor fornecedorFacil = new Fornecedor( "Facil");
-                Fornecedor fornecedorIke = new Fornecedor( "Ike");
+                
 
 
                 ColaboradorLogin colaborador1 = new ColaboradorLogin( "Maria Jose Fernandes", "mariajose@localiza.com", "Localiza@123");
@@ -43,21 +42,19 @@ namespace ProjetoPilotoReboque.Data
                 FornecedorLogin fornecedor2= new FornecedorLogin( "Bruno Lazasqui", "brunolazasqui@facil.com", "facil@157");
                 FornecedorLogin fornecedor3 = new FornecedorLogin( "Tamires Araujo Souza", "tamires@ike.com", "ike@157");
 
-                Veiculo veiculo1 = new Veiculo( "Renegate","qud5474" ,GrupoDeVeiculo.Gx);
-                Veiculo veiculo2 = new Veiculo( "Novo Uno 1.0", "qad2943", GrupoDeVeiculo.C);
-                Veiculo veiculo3 = new Veiculo( "Mobi 1.0", "Rfe9f23", GrupoDeVeiculo.B);
-                Veiculo veiculo4 = new Veiculo( "Fiorino", "qus3493", GrupoDeVeiculo.P) ;
 
 
+                FormularioAcionamento formulario = new FormularioAcionamento("Maria De Jesus", "agvig5458", "europ", new DateTime(2021, 09, 12), "que9182","pane", "Veiculo colidiu com uma carreta","Rua tamires 23 bairro Novo horizonte, Centro MG");
 
              
 
-                _context.Fornecedor.AddRange(fornecedorEurop, fornecedorFacil, fornecedorIke);
 
                 _context.ColaboradorLogin.AddRange(colaborador1, colaborador2, colaborador3);
 
+              
                 _context.FornecedorLogin.AddRange(fornecedor1, fornecedor2, fornecedor3);
-                _context.Veiculo.AddRange(veiculo1, veiculo2, veiculo3, veiculo4);
+           
+                _context.FormularioAcionamento.Add(formulario);
 
                 _context.SaveChanges();
 

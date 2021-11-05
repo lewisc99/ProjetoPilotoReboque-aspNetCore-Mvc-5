@@ -26,9 +26,6 @@ namespace ProjetoPilotoReboque.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CausaDaOcorrencia")
-                        .HasColumnType("int");
-
                     b.Property<string>("ClienteNomeCompleto")
                         .HasColumnType("nvarchar(max)");
 
@@ -47,14 +44,15 @@ namespace ProjetoPilotoReboque.Migrations
                     b.Property<int>("FornecedorId")
                         .HasColumnType("int");
 
-                    b.Property<int>("VeiculoId")
-                        .HasColumnType("int");
+                    b.Property<string>("Placa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TipoDeOcorrencia")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("FornecedorId");
-
-                    b.HasIndex("VeiculoId");
 
                     b.ToTable("FormularioAcionamento");
                 });
@@ -116,27 +114,6 @@ namespace ProjetoPilotoReboque.Migrations
                     b.ToTable("FornecedorLogin");
                 });
 
-            modelBuilder.Entity("ProjetoPilotoReboque.Models.Veiculo", b =>
-                {
-                    b.Property<int>("VeiculoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Grupo")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Modelo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Placa")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("VeiculoId");
-
-                    b.ToTable("Veiculo");
-                });
-
             modelBuilder.Entity("ProjetoPilotoReboque.Models.FormularioAcionamento", b =>
                 {
                     b.HasOne("ProjetoPilotoReboque.Models.Fornecedor", "Fornecedor")
@@ -145,23 +122,10 @@ namespace ProjetoPilotoReboque.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProjetoPilotoReboque.Models.Veiculo", "Veiculo")
-                        .WithMany("FormularioAcionamento")
-                        .HasForeignKey("VeiculoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Fornecedor");
-
-                    b.Navigation("Veiculo");
                 });
 
             modelBuilder.Entity("ProjetoPilotoReboque.Models.Fornecedor", b =>
-                {
-                    b.Navigation("FormularioAcionamento");
-                });
-
-            modelBuilder.Entity("ProjetoPilotoReboque.Models.Veiculo", b =>
                 {
                     b.Navigation("FormularioAcionamento");
                 });

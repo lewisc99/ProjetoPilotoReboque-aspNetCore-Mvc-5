@@ -11,12 +11,13 @@ namespace ProjetoPilotoReboque.Data
     public class PilotoReboqueContext:DbContext
     {
         public DbSet<FormularioAcionamento> FormularioAcionamento { get; set; }
-        public DbSet<Fornecedor> Fornecedor { get; set; }
-        public DbSet<Veiculo> Veiculo { get; set; }
-
+  
+  
         public DbSet<ColaboradorLogin> ColaboradorLogin { get; set; }
 
         public DbSet<FornecedorLogin> FornecedorLogin { get; set; }
+
+      
 
 
         public PilotoReboqueContext(DbContextOptions<PilotoReboqueContext> options):base(options)
