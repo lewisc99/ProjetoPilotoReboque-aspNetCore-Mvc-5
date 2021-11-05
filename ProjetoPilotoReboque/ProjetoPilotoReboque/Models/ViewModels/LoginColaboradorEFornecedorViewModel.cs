@@ -9,7 +9,7 @@ namespace ProjetoPilotoReboque.Models.ViewModels
     public class LoginColaboradorEFornecedorViewModel
     {
 
-        public Task<ColaboradorLogin> ColaboradorLogin { get; set; }
-        public Task<FornecedorLogin> FornecedorLogin { get; set; }
+        public ColaboradorLogin ColaboradorLogin { get; set; }
+        public FornecedorLogin FornecedorLogin { get; set; }
     }
 }

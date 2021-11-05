@@ -71,8 +71,6 @@ C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\ob
 C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\obj\Debug\net5.0\Razor\Views\Acionamentos\Delete.cshtml.g.cs
 C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\obj\Debug\net5.0\Razor\Views\Acionamentos\Index.cshtml.g.cs
 C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\obj\Debug\net5.0\Razor\Views\Home\LoginColaborador.cshtml.g.cs
-C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\obj\Debug\net5.0\Razor\Views\Home\LoginFornecedor.cshtml.g.cs
 C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
@@ -149,3 +147,4 @@ C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\bi
 C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\obj\Debug\net5.0\Razor\Views\Acionamentos\Create.cshtml.g.cs
 C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\obj\Debug\net5.0\Razor\Views\Acionamentos\Editar.cshtml.g.cs
+C:\Users\Pichau\Desktop\Acionamento\ProjetoPilotoReboque\ProjetoPilotoReboque\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs

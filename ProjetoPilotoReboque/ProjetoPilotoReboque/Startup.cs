@@ -39,6 +39,9 @@ namespace ProjetoPilotoReboque
 
             });
 
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+
 
             //lembre-se para povoar o banco de dados precisa passar abaixo, que a classe para povoar os dados, vai esta ativa em ambiente de execução.
 
@@ -65,7 +68,7 @@ namespace ProjetoPilotoReboque
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthorization();

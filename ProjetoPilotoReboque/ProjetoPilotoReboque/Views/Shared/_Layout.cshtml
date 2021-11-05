@@ -1,7 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Http;
-<!--{
-    string Login = Context.Session.GetString("Login"); //uma forma de acessar o http contexto do HomeController
-}--->
+
+@{
+  string Login = Context.Session.GetString("Login");
+}
 
 
 <!DOCTYPE html>
@@ -22,17 +23,28 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
 
-                        <li><a class="nav-link text-dark" asp-controller="Acionamentos" asp-action="Index">Acionamentos</a></li>
-                        <li><a class="nav-link text-dark" asp-controller="Home" asp-action="LoginColaborador">Login Colaborador</a></li>
-                        <li><a class="nav-link text-dark" asp-controller="Home" asp-action="LoginFornecedor">Login Fornecedor</a></li>
+                        @if (Login != null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            </li>
 
-                        <li><a class="nav-link text-dark" asp-controller="Home" asp-action="LogOut">LogOut</a></li>
+                            <li><a class="nav-link text-dark" asp-controller="Acionamentos" asp-action="Index">Acionamentos</a></li>
+                            <li><a class="nav-link text-dark" asp-controller="Home" asp-action="LogOut">LogOut</a></li>
+                        }
+                        else
+                        {
+                            <li><a class="nav-link text-dark" asp-controller="Home" asp-action="Login">Login Colaborador</a></li>
+                            <li><a   class="disabled nav-link text-dark" asp-controller="Home" asp-action="LoginFornecedor">Login Fornecedor</a></li>
+                        }
+
+
+
+
                     </ul>
                 </div>
             </div>
