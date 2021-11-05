@@ -1,4 +1,5 @@
-﻿using ProjetoPilotoReboque.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoPilotoReboque.Data;
 using ProjetoPilotoReboque.Models;
 using System;
 using System.Collections.Generic;
@@ -17,14 +18,14 @@ namespace ProjetoPilotoReboque.Repositories
         {
             _context = context;
         }
-        public void Adicionar(FormularioAcionamento formulario)
+        public async  Task Adicionar(FormularioAcionamento formulario)
         {
-            _context.FormularioAcionamento.Add(formulario);
-            _context.SaveChanges();
+            await _context.FormularioAcionamento.AddAsync(formulario);
+          await  _context.SaveChangesAsync();
 
         }
 
-        public void Editar(FormularioAcionamento formulario)
+        public async Task Editar(FormularioAcionamento formulario)
         {
 
 
@@ -36,31 +37,31 @@ namespace ProjetoPilotoReboque.Repositories
             }
             // var find = _context.Person.FirstOrDefault(x => x.Id == person.Id);
 
-            _context.Update(formulario);
-            _context.SaveChangesAsync();
+           _context.Update(formulario);
+          await  _context.SaveChangesAsync();
         }
 
-        public void Excluir(int id)
+        public async Task Excluir(int id)
         {
-            var findId = ObterPorId(id);
+            var findId = await ObterPorId(id);
 
             _context.FormularioAcionamento.Remove(findId);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public FormularioAcionamento ObterPorId(int id)
+        public async Task<FormularioAcionamento> ObterPorId(int id)
         {
-            var findId = _context.FormularioAcionamento.Find(id);
+            var findId = await _context.FormularioAcionamento.FindAsync(id);
             return findId;
 
         }
 
-        public IEnumerable<FormularioAcionamento> ObterTodos()
+        public async Task<IEnumerable<FormularioAcionamento>> ObterTodos()
         {
 
-            var obterTodos = _context.FormularioAcionamento.ToList();
+            var obterTodos = await _context.FormularioAcionamento.ToListAsync();
 
-            return obterTodos;
+            return  obterTodos;
         }
     }
 }

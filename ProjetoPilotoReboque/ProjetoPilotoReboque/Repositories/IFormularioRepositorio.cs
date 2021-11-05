@@ -8,14 +8,14 @@ namespace ProjetoPilotoReboque.Repositories
 {
    public interface IFormularioRepositorio
     {
-        IEnumerable<FormularioAcionamento> ObterTodos();
+        Task<IEnumerable<FormularioAcionamento>> ObterTodos();
 
-        FormularioAcionamento ObterPorId(int id);
+        Task<FormularioAcionamento> ObterPorId(int id);
 
-        void Adicionar(FormularioAcionamento formulario);
-        void Editar(FormularioAcionamento formulario);
+        Task Adicionar(FormularioAcionamento formulario);
+        Task Editar(FormularioAcionamento formulario);
 
-        void Excluir(int id);
+        Task Excluir(int id);
 
 
     }

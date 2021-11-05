@@ -22,9 +22,9 @@ namespace ProjetoPilotoReboque.Controllers
         }
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var list = _formularioRepositorio.ObterTodos();
+            var list =await  _formularioRepositorio.ObterTodos();
 
             return View(list);
         }
@@ -41,10 +41,16 @@ namespace ProjetoPilotoReboque.Controllers
 
 
         [HttpPost]
-        public IActionResult Create( FormularioAcionamento formulario)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create( FormularioAcionamento formulario)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(nameof(Create));
+            }
 
-             _formularioRepositorio.Adicionar(formulario);
+
+           await _formularioRepositorio.Adicionar(formulario);
 
 
             return RedirectToAction(nameof(Index));
@@ -53,10 +59,10 @@ namespace ProjetoPilotoReboque.Controllers
 
 
         [HttpGet]
-        public IActionResult Editar(int? id)
+        public async Task<IActionResult> Editar(int? id)
         {
 
-            var acharId = _formularioRepositorio.ObterPorId(id.Value);
+            var acharId = await _formularioRepositorio.ObterPorId(id.Value);
 
 
             return View(nameof(Editar), acharId);
@@ -67,10 +73,16 @@ namespace ProjetoPilotoReboque.Controllers
         }
        
         [HttpPost]
-        public IActionResult Editar( FormularioAcionamento formulario)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Editar( FormularioAcionamento formulario)
         {
 
-            _formularioRepositorio.Editar(formulario);
+            if (!ModelState.IsValid)
+            {
+                return View(nameof(Editar));
+            }
+
+            await _formularioRepositorio.Editar(formulario);
 
 
             return RedirectToAction(nameof(Index));
@@ -80,10 +92,15 @@ namespace ProjetoPilotoReboque.Controllers
 
         }
         [HttpGet]
-        public IActionResult Delete(int? id)
+        public async Task<IActionResult> Delete(int? id)
         {
+            if (id == null)
+            {
+                return RedirectToAction(nameof(Error), new { message = "Id not provided" });
 
-            var acharId = _formularioRepositorio.ObterPorId(id.Value);
+            }
+
+            var acharId = await  _formularioRepositorio.ObterPorId(id.Value);
 
 
             return View(acharId);
@@ -94,10 +111,11 @@ namespace ProjetoPilotoReboque.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(int id)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
         {
 
-            _formularioRepositorio.Excluir(id);
+          await  _formularioRepositorio.Excluir(id);
 
 
             return RedirectToAction(nameof(Index));
