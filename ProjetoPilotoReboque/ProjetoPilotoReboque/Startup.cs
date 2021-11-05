@@ -73,6 +73,10 @@ namespace ProjetoPilotoReboque
 
             app.UseAuthorization();
 
+
+            app.UseCookiePolicy();
+
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
