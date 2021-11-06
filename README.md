@@ -18,7 +18,7 @@ Asynchronous operations using Tasks (async, await)</br>
 
 ## 🖼 Screenshot das telas da aplicação <br/>
 <p>Tela Inicial</p><img src="imagens/TelaPrincipal.PNG">
-<p>Tela de Login</p><img src="imagens/TeladeLogin.PNG">
+<p>Tela de Login</p><img src="imagens/login.PNG">
 <br/>
 <br/>
 <p>Banco de Dados</p><img src="imagens/TeladoBancodeDados.PNG">
