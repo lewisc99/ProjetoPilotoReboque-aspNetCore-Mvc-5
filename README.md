@@ -1,7 +1,7 @@
 # ASPNET Core MVC 5 - Crud Cadastro de Acionamento de Reboque Versão BETA.
 
 projeto básico de Cadastro de Acionamentos de remoção de veículo prototipo Usando como referência
- o sistema de acionamento da Localiza (CRUD), Usando Login Basico, 
+ o sistema de acionamento de reboque (CRUD), Usando Login Basico, 
 com funcionarios já cadastrados no banco, sem possibilidade de acessar o sistema de cadastro
 de Login sem que esteja Logado.
 
