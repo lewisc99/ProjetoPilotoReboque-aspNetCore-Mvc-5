@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MDGyhf0iKzgAqwuQHST3VB/BerZOEKOAgvIJ77VGIcvLPwB8cXrcgBAQYgsbbizexzjnCJKYO/aqMIGo2rDsQQ==",
+  "dgSpecHash": "tgyV8AANMM0E+uyfnpESVRjkRWyr9jVU49o1MdJG10GOrKlCWNdo5zJi3AQTdL7jmqoM6e8bGnl9Tlfm96R1tw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pichau\\Desktop\\Acionamento\\ProjetoPilotoReboque\\ProjetoPilotoReboque.tests\\ProjetoPilotoReboque.tests.csproj",
+  "projectFilePath": "C:\\Users\\Pichau\\Desktop\\acio\\ProjetoPilotoReboque\\ProjetoPilotoReboque.tests\\ProjetoPilotoReboque.tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pichau\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
