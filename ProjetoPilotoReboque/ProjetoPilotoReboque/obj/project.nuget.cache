@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DvSpj05JcWOVnQUxAhPsA7tX4AAowAMJHTiTLgMDQk0oVTayeeLGW5vNqPVCIeZy4WfdSX0O2yuijBP5cuQIqw==",
+  "dgSpecHash": "wHuuOcWPzWgyt/9TZM8SGaucERDT0F9zOqcWrwpsWzB+RHI/AMxUEem01fkzoFhy0f7uDXCpre/J6ij31K5Ggw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pichau\\Desktop\\Acionamento\\ProjetoPilotoReboque\\ProjetoPilotoReboque\\ProjetoPilotoReboque.csproj",
+  "projectFilePath": "C:\\Users\\Pichau\\Desktop\\acio\\ProjetoPilotoReboque\\ProjetoPilotoReboque\\ProjetoPilotoReboque.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pichau\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
