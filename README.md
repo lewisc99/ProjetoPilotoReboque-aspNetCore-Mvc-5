@@ -1,9 +1,15 @@
 # ASPNET Core MVC 5 - Crud Cadastro de Acionamento de Reboque Versão BETA.
 
-projeto básico de Cadastro de Acionamentos de remoção de veículo prototipo Usando como referência
- o sistema de acionamento de reboque (CRUD), Usando Login Basico, 
-com funcionarios já cadastrados no banco, sem possibilidade de acessar o sistema de cadastro
-de Login sem que esteja Logado.
+<h3>Description English</h3>
+<p>
+This project aims to develop a prototype vehicle removal drive registration system, using the trailer drive system (CRUD) as a reference. To guarantee the security and reliability of the system, a Basic Login will be implemented, with employees previously registered in the database. Only those who are logged in will be able to access the Login registration system. In addition, the system will allow the insertion, updating and deletion of information related to vehicle removal drives, in order to provide an efficient and simplified management of these records. With this project, it will be possible to improve technical skills in programming and databases, in addition to developing technological solutions that meet the demands of the market.
+    </p>
+    
+<h3>Descrição em Português </h3>
+<p>Este projeto tem como objetivo o desenvolvimento de um sistema de Cadastro de Acionamentos de remoção de veículo protótipo, utilizando o sistema de acionamento de reboque (CRUD) como referência. Para garantir a segurança e a confiabilidade do sistema, será implementado um Login Básico, com funcionários previamente cadastrados no banco de dados. Somente aqueles que estiverem logados poderão acessar o sistema de cadastro de Login. Além disso, o sistema permitirá a inserção, atualização e exclusão de informações relacionadas aos acionamentos de remoção de veículo, a fim de proporcionar uma gestão eficiente e simplificada desses registros. Com esse projeto, será possível aprimorar as habilidades técnicas em programação e bancos de dados, além de desenvolver soluções tecnológicas que atendam às demandas do mercado. </p>
+
+
+
 
 <br />
 <br />
